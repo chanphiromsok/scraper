@@ -8,9 +8,7 @@ defmodule Scraper.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      PageProducer,
-      PageConsumerSupervisor,
-      OnlinePageProducerConsumer
+      ScrapingPipeline
     ]
 
     # producer always have to start before consumer,
